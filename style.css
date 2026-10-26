@@ -219,7 +219,8 @@ a {
     object-fit: cover;
     position: relative;
     z-index: 2;
-    filter: grayscale(12%);
+    object-position: center 20%;
+    height: auto;
 }
 
 .image-decoration {
@@ -709,4 +710,19 @@ footer {
         gap: 8px;
     }
 
+}
+
+/* Section navigation and profile links */
+section[id] { scroll-margin-top: 98px; }
+.hero-links { flex-wrap: wrap; gap: 14px; }
+.hero-links .button { border: 1px solid #161616; }
+.social-contact-button { border-color: #aaa; color: white; }
+.social-contact-button:hover { background: white; color: #161616; }
+a:focus-visible, button:focus-visible { outline: 3px solid #47719b; outline-offset: 5px; }
+.menu-toggle { min-width: 44px; min-height: 44px; }
+@media (max-width: 700px) { section[id] { scroll-margin-top: 88px; } }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
 }

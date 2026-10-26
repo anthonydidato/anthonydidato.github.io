@@ -22,7 +22,8 @@ menuToggle.addEventListener("click", () => {
 
     const isOpen = navLinks.classList.contains("active");
 
-    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
 
 });
 
@@ -36,6 +37,7 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
         navLinks.classList.remove("active");
 
         menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
 
     });
 
@@ -94,4 +96,14 @@ window.addEventListener("scroll", () => {
 
     }
 
+});
+
+// Escape closes the mobile menu and restores keyboard focus.
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.focus();
+    }
 });

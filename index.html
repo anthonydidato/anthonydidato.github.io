@@ -28,7 +28,7 @@
          NAVIGATION
     ========================== -->
     <header class="site-header">
-        <nav class="navbar container">
+        <nav class="navbar container" aria-label="Main navigation">
             <a href="#home" class="logo">AD.</a>
 
             <button
@@ -36,6 +36,7 @@
                 id="menuToggle"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
+                aria-controls="navLinks"
             >
                 <span></span>
                 <span></span>
@@ -43,7 +44,7 @@
             </button>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#leadership">Leadership</a></li>
@@ -86,8 +87,9 @@
                     </a>
                 </div>
 
-                <div class="hero-links">
+                <div class="hero-links" aria-label="Professional profiles">
                     <a
+                        class="button secondary-button"
                         href="https://linkedin.com/in/anthony-didato"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -95,9 +97,7 @@
                         LinkedIn ↗
                     </a>
 
-                    <a href="mailto:anthonydidato@student.fairfield.edu">
-                        Email ↗
-                    </a>
+                    <a href="https://github.com/anthonydidato" class="button secondary-button" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
                 </div>
             </div>
 
@@ -106,7 +106,9 @@
                 <div class="image-decoration"></div>
 
                 <img
-                    src="profile.jpg"
+                    src="profile.png"
+                    width="1024" height="1536"
+                    fetchpriority="high"
                     alt="Portrait of Anthony Didato"
                     class="profile-image"
                 >
@@ -453,10 +455,11 @@
                         href="https://linkedin.com/in/anthony-didato"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="linkedin-link"
+                        class="button social-contact-button"
                     >
                         LinkedIn ↗
                     </a>
+                    <a href="https://github.com/anthonydidato" class="button social-contact-button" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 
                 </div>
 
